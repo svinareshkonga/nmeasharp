@@ -43,10 +43,6 @@ namespace gps
         private StreamWriter outFile = null;
         private void NewGspPosition(gps.parser.GpsPosition pos)
         {
-            if (outFile == null)
-            {
-                outFile = new System.IO.StreamWriter(@"C:\Temp\test2.txt");
-            }
             outFile.WriteLine(pos.x.ToString().Replace(',', '.'));
             outFile.WriteLine(pos.y.ToString().Replace(',', '.'));
         }
